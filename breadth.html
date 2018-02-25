@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- load global styles and libraries -->
+	<script src="js/layouts/load_global_styles.js"></script>
+	<script src="js/layouts/load_libraries.js"></script>
+
+	<!-- load local css -->
+	<link href='css/breadth.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<!-- load navigation bar -->
+	<script src="js/layouts/load_navigation.js"></script>
+
+
+	<!-- html -->
+
+	<div id="mind-container">
+		<div id="mind">
+			<div id="thoughts">
+				<img src="https://i.imgur.com/eJmv3i2.jpg">
+			</div>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-primary" id="m-button"> M </button>
+
+	<!-- javascript -->
+
+	<script>
+
+	offset = 0
+	var mouseX
+	var mouseY
+	var increase = 10
+
+
+	$(document).mousemove( function(e) {
+	   mouseX = e.pageX - 158 - offset; 
+	   mouseY = e.pageY - 60 - offset;
+	   $('#mind').css({'top':mouseY,'left':mouseX});
+	   $('#thoughts').css({'top':-mouseY,'left':-mouseX});
+	});  
+
+	$("#m-button").click( function() {
+	   $('#mind').animate({
+	   		'width':"+=" + increase,
+	   		'height':"+=" + increase
+	   	}, 1000, 'linear');
+	   offset += increase
+	});  
+
+	</script>
+
+</body>
+</html>
