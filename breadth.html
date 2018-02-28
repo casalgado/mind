@@ -19,7 +19,15 @@
 
 	<div class="grid-layout" id="main-content">
 		<h1> Breadth </h1>
-		<p> onthsos </p>
+		<p> 
+			Our introspective awareness is easily compared to vision. Perhaps it is because sight is the sense with which we <a target="_blank" href="http://i1.wp.com/3ms.ie/test/wp-content/uploads/2013/08/NorretrnadersBandwidth.png?resize=481%2C481">process most information.</a>  If we were dogs, would we find it easier to compare our introspective awareness to smell? Interesting question, but not for today. 
+		</p>
+		<p>
+			Continuing with vision as our preferred comparison to introspective awareness, the following 'game' has been created to represent how expanding our introspective conciousness allows us to see the 'big picture' in our minds. It shows how hard it is to 'see' when the scope of our vision is small, and how it becomes progressively easier as the breadth of our attention and awareness grows. 
+		</p>
+		<p>
+			Behind the white square below is an image that can be seen through a circular opening. The image represents the contents of our mind, and the opening represents what we are able to perceive. Can you make sense of what is behind the veil?
+		</p>
 		<div id="mind-container">
 			<div id="mind">
 				<div id="thoughts">
@@ -27,7 +35,8 @@
 				</div>
 			</div>
 		</div>
-		<p class="side-text" id='m0'> At this stage </p>
+		<p class="side-text" id='m0'> At this stage it is very difficult to make sense of anything. <br><br>Anyway, go ahead and try. It will make the later stages more significant. <br><br> When you've had enough, click the button below to expand the scope of concsiousness. </p>
+		<p class="side-text" id='m1'> Now </p>
 		<button type="button" class="btn btn-primary" id="m-button"> M </button>
 	</div>
 
@@ -40,6 +49,7 @@
 	<script>
 
 	offset = 0
+	sideText = 0
 	var mouseX
 	var mouseY
 	var marginx = $('#mind-container')[0].getBoundingClientRect().left
@@ -59,7 +69,11 @@
 	   		'width':"+=" + increase,
 	   		'height':"+=" + increase
 	   	}, 1000, 'linear');
+	   sideText += 1
 	   offset += increase/2
+	   var sideTextId = '#m' + sideText 
+	   $('.side-text').hide()
+	   $(sideTextId).show()
 	});  
 
 	</script>
