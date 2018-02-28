@@ -35,8 +35,17 @@
 				</div>
 			</div>
 		</div>
-		<p class="side-text" id='m0'> At this stage it is very difficult to make sense of anything. <br><br>Anyway, go ahead and try. It will make the later stages more significant. <br><br> When you've had enough, click the button below to expand the scope of concsiousness. </p>
-		<p class="side-text" id='m1'> Now </p>
+		<p id="level"> Level 0 </p>
+		<p class="side-text" id='m0'> At this level it is very difficult to make sense of anything. <br><br>Anyway, go ahead and try. It will make the later levels more significant. <br><br> When you've had enough, click the button below to expand the scope of concsiousness. </p>
+		
+		<p class="side-text" id='m1'> Behold your new powers of observation. Compared to the previous stage they have substantially improved. <br><br> Even thought the big picture is far from reach... can you identify any shapes or objects? (hint: look in bottom center) <br><br> When you are ready to move on, click the button. </p>
+
+		<p class="side-text" id='m2'> Try to observe how your ability to 'understand' the image grows as the scope of perception increases. <br><br> Slowly you will be able to make sense of something that was previously unknown. (Is that a shoe?) <br><br> A similar phenomenom occurs in our mind as the breadth of awareness is increased. <br><br> In this 'game' as in the mind, as our perception grows we are able to see the 'big picture'. </p>
+
+		<p class="side-text" id='m3'> Try to observe how your ability to 'understand' the image grows as the scope of perception increases. <br><br> Slowly you will be able to make sense of something that was previously unknown. (Is that a shoe?) <br><br> A similar phenomenom occurs in our mind as the breadth of awareness is increased. <br><br> In this 'game' as in the mind, as our perception grows we are able to see the 'big picture'. <br><br> Continue leveling-up until you are satisfied. </p>
+
+
+		<p class="side-text" id='m3'>  </p>
 		<button type="button" class="btn btn-primary" id="m-button"> M </button>
 	</div>
 
@@ -74,6 +83,8 @@
 	   var sideTextId = '#m' + sideText 
 	   $('.side-text').hide()
 	   $(sideTextId).show()
+	   if (sideText >= 3) {$('#m3').show()};
+	   $('#level').text('Level ' + sideText)
 	});  
 
 	</script>

@@ -32,12 +32,17 @@
 	margin-left: 3%;
 }
 
+#level {
+	margin-left: 3%;
+	float: left;
+}
+
 .side-text {
 	display: none;
 	max-width: 25%;
 	float: left;
 	padding-left: 3%;
-	padding-top: 3%;
+	padding-top: 1%;
 	font-size: 14px;
 }
 
