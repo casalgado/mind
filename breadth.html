@@ -17,15 +17,25 @@
 
 	<!-- html -->
 
-	<div id="mind-container">
-		<div id="mind">
-			<div id="thoughts">
-				<img src="https://i.imgur.com/eJmv3i2.jpg">
+	<div class="grid-layout" id="main-content">
+		<h1> Breadth </h1>
+		<p> onthsos </p>
+		<div id="mind-container">
+			<div id="mind">
+				<div id="thoughts">
+					<img src="https://i.imgur.com/eJmv3i2.jpg">
+				</div>
 			</div>
 		</div>
+		<button type="button" class="btn btn-primary" id="m-button"> M </button>
 	</div>
 
-	<button type="button" class="btn btn-primary" id="m-button"> M </button>
+	<div class="grid-layout" id="sidebar"> 
+		
+	</div>
+	
+
+	
 
 	<!-- javascript -->
 
@@ -34,12 +44,14 @@
 	offset = 0
 	var mouseX
 	var mouseY
+	var marginx = $('#mind-container')[0].getBoundingClientRect().left
+    var marginy = $('#mind-container')[0].getBoundingClientRect().top
 	var increase = 10
 
 
 	$(document).mousemove( function(e) {
-	   mouseX = e.pageX - 158 - offset; 
-	   mouseY = e.pageY - 60 - offset;
+	   mouseX = e.pageX - marginx - offset - 7; 
+	   mouseY = e.pageY - marginy - offset - 7;
 	   $('#mind').css({'top':mouseY,'left':mouseX});
 	   $('#thoughts').css({'top':-mouseY,'left':-mouseX});
 	});  
@@ -49,7 +61,7 @@
 	   		'width':"+=" + increase,
 	   		'height':"+=" + increase
 	   	}, 1000, 'linear');
-	   offset += increase
+	   offset += increase/2
 	});  
 
 	</script>

@@ -1,0 +1,23 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
+
+.grid-layout {
+	float: left;
+}
+
+#main-content {
+	width: 90%;
+	margin: 0% 10% 0% 10%;
+}
+
+p {
+	font-family: 'PT Serif', serif;
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 54px;
+}
+
